@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main()
+{
+    int i,j,n,arr[100],key,ele,pos;
+    printf("\n ENTER THE SIZE OF THE ARRAY = ");
+    scanf("%d",&n);
+    printf("\n ENTER THE ARRAY ELEMENTS:\n");
+    for (i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    printf("\n ENTER THE POSITION OF THE ELELMENT TO BE DELETED = ");
+    scanf("%d",&pos);
+    if (pos >= n+1)
+      printf("DELETION NOT POSSIBLE.\n");
+   else
+   {
+      for (i = pos - 1; i < n - 1; i++)
+         arr[i] = arr[i+1];
+
+      printf("RESULTANT ARRAY = \n");
+
+      for (i = 0; i < n - 1; i++)
+         printf("%d ", arr[i]);
+   }
+
+   return 0;
+}
