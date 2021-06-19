@@ -1,0 +1,40 @@
+#include<stdio.h>
+int main()
+{
+    int i,j,n,arr[100];
+    int temp,small = 1111,large = -1111,large_pos = 0,small_pos = 0;
+    printf("\n ENTER THE SIZE OF THE ARRAY = ");
+    scanf("%d",&n);
+    printf("\n ENTER THE ARRAY ELEMENTS:\n");
+    for (i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    for (i=0;i<n;i++)
+    {
+       if(arr[i]<small)
+       {
+           small = arr[i];
+           small_pos = i;
+       }
+    }
+    for (j=0;j<n;j++)
+    {
+       if(arr[j]>large)
+       {
+           large = arr[j];
+           large_pos = j;
+       }
+    }
+    printf("\n SMALLEST ELEMENT IS %d AND IS AT THE POSITION %d \n",small,small_pos);
+    printf("\n LARGEST ELEMENT IS %d AND IS AT THE POSITION %d \n",large_pos,large);
+    temp = arr[large_pos];
+    arr[large_pos] = arr[small_pos];
+    arr[small_pos] = temp;
+    printf("\n NEW ARRAY = ");
+    for (i=0;i<n;i++)
+    {
+        printf("%d ",arr[i]);
+    }
+    return 0;
+}
