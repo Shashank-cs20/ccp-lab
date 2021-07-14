@@ -1,0 +1,88 @@
+#include<stdio.h>
+int main()
+{
+    int i;
+    struct books
+    {
+        char book_title[100];
+        char author[20];
+        int price;
+        int no_pages;
+        int dd;
+        int mm;
+        int yy;
+    }book[3];
+    for(i=0;i<3;i++)
+    {
+    printf("\n******************************");
+    printf("\n ENTER %dst BOOK DETAILS\n",i+1);
+    printf("\n Enter the title of the book : ");
+	scanf("%s",book[i].book_title);
+    printf("\n Enter the author name : ");
+	scanf("%s",book[i].author);
+	printf("\n Enter the price : ");
+	scanf("%d", &book[i].price);
+	printf("\n Enter the publishing date : ");
+	scanf("%d %d %d", &book[i].dd,&book[i].mm,&book[i].yy);
+    printf("\n******************************");
+    }
+    for(i=0;i<3;i++)
+    {
+    printf("\n BOOK %d DETAILS",i+1);
+    printf("\n******************************");
+	printf("\n NAME = ");
+    puts(book[i].book_title);
+    printf("\n AUTHOR = ");
+    puts(book[i].author);
+    printf("\n PRICE = %d\n", book[i].price);
+	printf("\n DATE OF PUBLICATION = %d-%d-%d", book[i].dd,book[i].mm,book[i].yy);
+	printf("\n******************************");
+    }
+    printf("\n******************************");
+
+    if(book[0].price>book[1].price)
+    {   if(book[0].price>book[2].price)
+        {
+        printf("\n BOOK ONE HAS HIGHEST PRICE");
+        printf("\n******************************");
+        printf("\n BOOK DETAILS");
+        printf("\n******************************");
+	 	printf("\n NAME = ");
+        puts(book[0].book_title);
+        printf("\n AUTHOR = ");
+        puts(book[0].author);
+        printf("\n PRICE = %d\n", book[0].price);
+	 	printf("\n DATE OF PUBLICATION = %d-%d-%d", book[0].dd,book[0].mm,book[0].yy);
+        }
+    }
+    else
+    {
+        if (book[1].price>book[2].price)
+        {
+        printf("\n BOOK TWO HAS HIGHEST PRICE");
+        printf("\n******************************");
+        printf("\n BOOK DETAILS");
+        printf("\n******************************");
+	 	printf("\n NAME = ");
+        puts(book[1].book_title);
+        printf("\n AUTHOR = ");
+        puts(book[1].author);
+        printf("\n PRICE = %d\n", book[1].price);
+	 	printf("\n DATE OF PUBLICATION = %d-%d-%d", book[1].dd,book[1].mm,book[1].yy);
+        }
+        else
+        {
+        printf("\n BOOK THREE HAS HIGHEST PRICE");
+        printf("\n******************************");
+        printf("\n BOOK DETAILS");
+        printf("\n******************************");
+	 	printf("\n NAME = ");
+        puts(book[2].book_title);
+        printf("\n AUTHOR = ");
+        puts(book[2].author);
+        printf("\n PRICE = %d\n", book[2].price);
+	 	printf("\n DATE OF PUBLICATION = %d-%d-%d", book[2].dd,book[2].mm,book[2].yy);
+        }
+    }
+    return 0;
+}
