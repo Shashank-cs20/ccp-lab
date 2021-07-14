@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{
+    int num1,num2,mul,sum,diff;
+    float div;
+    printf("\n ENTER 2 NUMBERS=");
+    scanf("%d %d",&num1,&num2);    int *ptr1, *ptr2;
+    ptr1 = &num1;
+    ptr2 = &num2;
+    sum = *ptr1 + *ptr2;
+    mul =  *ptr1 * *ptr2;
+    diff = *ptr1 - *ptr2;
+    div = (float)*ptr1 / (float)*ptr2;
+    printf("\n SUM = %d",sum);
+    printf("\n DIFFERENCE = %d",diff);
+    printf("\n PRODUCT = %d",mul);
+    printf("\n DIVISION = %.2f",div);
+    return 0;
+}
