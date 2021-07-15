@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int converttominutes(int h, int m)
+{
+    int totalminutes;
+    totalminutes = (h * 60) + m;
+    return totalminutes;
+}
+
+int main()
+{
+    int hours, minutes, totalminutes;
+    printf("\nEnter the time in hours and minutes:\n");
+    printf("\nHours:\t");
+    scanf("%d", &hours);
+    printf("\nMinutes:\t");
+    scanf("%d", &minutes);
+    totalminutes = converttominutes(hours, minutes);
+    printf("\ntotal time in minutes:\t%d\n", totalminutes);
+    return 0;
+}
